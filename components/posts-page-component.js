@@ -23,15 +23,15 @@ export function renderPostsPageComponent({ appEl }) {
                         <img src="${
                           user.imageUrl
                         }" class="post-header__user-image">
-                        <p class="post-header__user-name">${posts.user}</p>
+                        <p class="post-header__user-name">${user}</p>
                     </div>
                     <div class="post-image-container">
                       <img class="post-image" src="${user.imageUrl}">
                     </div>
                     <div class="post-likes">
-                      <button data-post-id="${posts.id}" class="like-button">
+                      <button data-post-id="${post.id}" class="like-button">
                       ${
-                        posts[index].isliked
+                        post[index].isliked
                           ? "./assets/images/like-active.svg"
                           : ""
                       }
@@ -41,11 +41,11 @@ export function renderPostsPageComponent({ appEl }) {
                       </p>
                     </div>
                     <p class="post-text">
-                      <span class="user-name">${posts.user}</span>
-                      ${posts.description}
+                      <span class="user-name">${post.user}</span>
+                      ${post.description}
                     </p>
                     <p class="post-date">
-                      ${posts.createdAt}
+                      ${post.createdAt}
                     </p>
                   </li>
             < /ul>
